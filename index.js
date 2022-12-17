@@ -1,0 +1,88 @@
+global.__base = __dirname + '/'
+require('dotenv').config()
+const chalk = require('chalk')
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const logger = require(`${__base}utils/logger`)
+const isDev = process.env.NODE_ENV === 'Development' ? true : false
+const usersStaff = require('./routes/staff/users')
+const credentialsStaff = require('./routes/credential/credential')
+const locationRoutes = require('./routes/location/locationRoutes')
+const catalogFreightClasses = require('./routes/catalog/freightClasses')
+const catalogDivisions = require('./routes/catalog/divisions')
+const vendorRoutes = require('./routes/vendor/vendorRoutes')
+const clients = require('./routes/client/clients')
+const contacts = require('./routes/contact/contacts')
+const catalogServiceTypes = require('./routes/catalog/catalogServiceType')
+const catalogServiceLevels = require('./routes/catalog/catelogServiceLevel')
+const noteRoutes = require('./routes/notes/noteRoutes')
+const catalogTimeZones = require('./routes/catalog/catalogTimeZones')
+const countries = require('./routes/catalog/countries')
+const catalogAirports = require('./routes/catalog/catalogAirports')
+const catalogPorts = require('./routes/catalog/catalogPorts')
+const catalogAirlines = require('./routes/catalog/catalogAirlines')
+const catalogAccessorials = require('./routes/catalog/catalogAccessorials')
+const catalogEquipmentTypeRoutes = require('./routes/catalog/catalogEquipmentTypeRoutes')
+const serviceRoutes = require('./routes/services/service')
+const trackingRoutes = require('./routes/tracking/trackingRoutes')
+const toolRoutes = require('./routes/tools/toolRoutes')
+const hubspot = require('./routes/hubspotRoute/hubspot')
+const quotesRoute = require('./routes/quotes/quotesRoute')
+const awsRoute = require('./routes/awsRoute/awsRoute')
+const dedicatedRateRoute = require('./routes/dedicatedRates/dedicatedRateRoute')
+// const swaggerUi = require('swagger-ui-express')
+// swaggerDocument = require('./swagger.json')
+const app = express()
+app.use(cors())
+
+app.use(bodyParser.json())
+
+app.use(bodyParser.urlencoded({ extended: true }))
+
+// app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+
+app.get('/', async (req, res) => {
+    res.send(`Welcome to the API`)
+})
+
+logger.info(process.env.NODE_ENV)
+
+usersStaff(app)
+credentialsStaff(app)
+locationRoutes(app)
+catalogFreightClasses(app)
+catalogDivisions(app)
+vendorRoutes(app)
+catalogServiceTypes(app)
+clients(app)
+noteRoutes(app)
+contacts(app)
+catalogTimeZones(app)
+countries(app)
+catalogAirports(app)
+catalogPorts(app)
+catalogAirlines(app)
+catalogAccessorials(app)
+catalogEquipmentTypeRoutes(app)
+catalogServiceLevels(app)
+serviceRoutes(app)
+trackingRoutes(app)
+toolRoutes(app)
+hubspot(app)
+quotesRoute(app)
+awsRoute(app)
+dedicatedRateRoute(app)
+if (!isDev) {
+    app.listen(8080, '0.0.0.0', () => {
+        console.log(
+            chalk.white.bgGreen.bold(` Live Server API Listening on 8080 `)
+        )
+    })
+} else {
+    app.listen(5000, '0.0.0.0', () => {
+        console.log(
+            chalk.white.bgGreen.bold(` Local Server API listening on 5000 `)
+        )
+    })
+}

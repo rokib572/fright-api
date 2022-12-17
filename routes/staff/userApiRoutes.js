@@ -1,0 +1,21 @@
+
+const API_PREFIX = '/api/';
+
+const API_STUFF_USERS = API_PREFIX + 'staff/users/';
+const API_SINGLE_STUFF_USERS = API_STUFF_USERS + ':id';
+const API_STUFF_USERS_LOGIN = API_STUFF_USERS + 'login';
+const API_STUFF_USERS_TOKEN = API_STUFF_USERS +  'token/:token';
+const API_STUFF_USERS_FORGOT_PASSWORD = API_PREFIX + 'staff/forgotPassword/email/:email';
+const API_STUFF_USERS_RESET_PASSWORD = API_PREFIX + 'staff/forgotPassword/token/:token';
+const API_STUFF_USERS_CONTACT_CARD = API_PREFIX + 'users/staff/:id/contactCard';
+
+
+module.exports = {
+    API_STUFF_USERS,
+    API_SINGLE_STUFF_USERS,
+    API_STUFF_USERS_LOGIN,
+    API_STUFF_USERS_TOKEN,
+    API_STUFF_USERS_FORGOT_PASSWORD,
+    API_STUFF_USERS_RESET_PASSWORD,
+    API_STUFF_USERS_CONTACT_CARD
+}

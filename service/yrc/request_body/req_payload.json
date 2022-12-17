@@ -1,0 +1,50 @@
+{
+  "login": {
+    "username": "",
+    "password": "",
+    "busId": "20065292805",
+    "busRole": "Third Party",
+    "paymentTerms": "Prepaid"
+  },
+  "details": {
+    "serviceClass": "STD",
+    "typeQuery": "QUOTE",
+    "pickupDate": "20220422",
+    "productCode": "DFQ"
+  },
+  "originLocation": {
+    "city": "fletcher",
+    "state": "nc",
+    "postalCode": "28732",
+    "country": "usa",
+    "locationType": "COMM"
+  },
+  "destinationLocation": {
+    "city": "palmyra",
+    "state": "va",
+    "postalCode": "22963",
+    "country": "usa",
+    "locationType": "COMM"
+  },
+  "listOfCommodities": {
+    "commodity": [
+      {
+        "packageLength": 48,
+        "packageWidth": 58,
+        "packageHeight": 87,
+        "weight": 1400,
+        "handlingUnits": 2,
+        "packageCode": "PLT"
+      },
+      {
+        "packageLength": 48,
+        "packageWidth": 58,
+        "packageHeight": 60,
+        "weight": 1400,
+        "handlingUnits": 1,
+        "packageCode": "PLT"
+      }
+    ]
+  },
+  "serviceOpts": { "accOptions": [] }
+}

@@ -1,0 +1,200 @@
+{
+    "_declaration": {
+        "_attributes": {
+            "version": "1.0",
+            "encoding": "UTF-8",
+            "standalone": "yes"
+        }
+    },
+    "FAQuoteResponse": {
+        "BillToCustomerNumber": {
+            "_text": "1234567"
+        },
+        "ShipperCustomerNumber": {
+            "_text": "1234567"
+        },
+        "OriginAirportCode": {},
+        "OriginZipCode": {
+            "_text": "90746"
+        },
+        "OriginCountryCode": {
+            "_text": "US"
+        },
+        "DestinationAirportCode": {},
+        "DestinationZipCode": {
+            "_text": "48154"
+        },
+        "DestinationCountryCode": {
+            "_text": "US"
+        },
+        "Dimensions": {
+            "Dimension": {
+                "Pieces": {
+                    "_text": "1"
+                },
+                "Length": {
+                    "_text": "40"
+                },
+                "Width": {
+                    "_text": "30"
+                },
+                "Height": {
+                    "_text": "20"
+                }
+            }
+        },
+        "FreightDetails": {
+            "FreightDetail": {
+                "FreightClass": {
+                    "_text": "60"
+                },
+                "Pieces": {
+                    "_text": "1"
+                },
+                "Weight": {
+                    "_text": "1500.0"
+                },
+                "WeightType": {
+                    "_text": "L"
+                },
+                "WeightAdjusted": {
+                    "_text": "N"
+                }
+            }
+        },
+        "Hazmat": {
+            "_text": "N"
+        },
+        "InBondShipment": {
+            "_text": "N"
+        },
+        "DeclaredValue": {
+            "_text": "0.00"
+        },
+        "QuoteDate": {
+            "_text": "2020-11-15"
+        },
+        "QuoteTotal": {
+            "_text": "400.39"
+        },
+        "TotalWeight": {
+            "_text": "1500.0"
+        },
+        "TransitDaysTotal": {
+            "_text": "3"
+        },
+        "ChargeLineItems": {
+            "ChargeLineItem": [
+                {
+                    "Code": {
+                        "_text": "PUL"
+                    },
+                    "Description": {
+                        "_text": "PICKUP"
+                    },
+                    "Zone": {
+                        "_text": "LGBLB"
+                    },
+                    "ServiceLevel": {
+                        "_text": "0"
+                    },
+                    "Amount": {
+                        "_text": "0.00"
+                    }
+                },
+                {
+                    "Code": {
+                        "_text": "DEL"
+                    },
+                    "Description": {
+                        "_text": "DELIVERY"
+                    },
+                    "Zone": {
+                        "_text": "A"
+                    },
+                    "ServiceLevel": {
+                        "_text": "0"
+                    },
+                    "Amount": {
+                        "_text": "0.00"
+                    }
+                },
+                {
+                    "Code": {
+                        "_text": "LTL"
+                    },
+                    "Description": {
+                        "_text": "LINEHAUL"
+                    },
+                    "Zone": {},
+                    "ServiceLevel": {
+                        "_text": "3"
+                    },
+                    "Amount": {
+                        "_text": "0.00"
+                    }
+                },
+                {
+                    "Code": {
+                        "_text": "FSC"
+                    },
+                    "Description": {
+                        "_text": "FSC"
+                    },
+                    "Zone": {},
+                    "ServiceLevel": {
+                        "_text": "0"
+                    },
+                    "Amount": {
+                        "_text": "57.50"
+                    }
+                },
+                {
+                    "Code": {
+                        "_text": "PUS"
+                    },
+                    "Description": {
+                        "_text": "PICKUP SURCHARGE"
+                    },
+                    "Zone": {},
+                    "ServiceLevel": {
+                        "_text": "0"
+                    },
+                    "Amount": {
+                        "_text": "7.50"
+                    }
+                },
+                {
+                    "Code": {
+                        "_text": "060"
+                    },
+                    "Description": {
+                        "_text": "CLASS 60"
+                    },
+                    "Zone": {},
+                    "ServiceLevel": {
+                        "_text": "0"
+                    },
+                    "Amount": {
+                        "_text": "319.42"
+                    }
+                },
+                {
+                    "Code": {
+                        "_text": "LHS"
+                    },
+                    "Description": {
+                        "_text": "STATION SURCHARGE"
+                    },
+                    "Zone": {},
+                    "ServiceLevel": {
+                        "_text": "0"
+                    },
+                    "Amount": {
+                        "_text": "15.97"
+                    }
+                }
+            ]
+        }
+    }
+}

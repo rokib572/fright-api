@@ -1,0 +1,46 @@
+const request = require('supertest')
+
+const {
+    UNIT_TEST_STUFF_USER,
+    BASE_URL,
+    TEST_TIMEOUT,
+} = require('../utils/testConstant')
+
+//Get token
+const getToken = async () => {
+    const response = await request(BASE_URL)
+        .post('/staff/users/login')
+        .send(UNIT_TEST_STUFF_USER)
+    return response.body.token
+}
+
+describe('Test catalogAirline', () => {
+    let token = ''
+
+    beforeAll(async () => {
+        token = await getToken()
+    }, TEST_TIMEOUT)
+
+    it(
+        'It should return catalog Airline',
+        async () => {
+            const response = await request(BASE_URL)
+                .get('/catalog/airlines')
+                .set('x-auth-token', `${token}`)
+            expect(response.statusCode).toBe(200)
+            expect(response.body.result.length >= 0).toBe(true)
+        },
+        TEST_TIMEOUT
+    )
+    it(
+        'It should return catalog Airline by query params',
+        async () => {
+            const response = await request(BASE_URL)
+                .get('/catalog/airlines?country=ab&name=air')
+                .set('x-auth-token', `${token}`)
+            expect(response.statusCode).toBe(200)
+            expect(response.body.result.length >= 0).toBe(true)
+        },
+        TEST_TIMEOUT
+    )
+})
